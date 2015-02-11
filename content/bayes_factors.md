@@ -50,12 +50,12 @@ The Bayes factor does not depend on the value of the prior model weights, but th
     :::python
     pi = (0.1, 0.9)
 
-Next, we need to specify a latent variable, which identifies the true model (we don't believe either model is "true", but we hope one is better than the other). This is easily done using a categorical random variable, that identifies one model or the other, according to their relative weight.
+Next, we need to specify a latent variable, which identifies the true model (we don't believe either model is "true", but we hope one is better than the other). This is easily done using a Bernoulli random variable, that identifies one model or the other, according to their relative weight.
 
     :::python
-    true_model = Categorical("true_model", p=pi, value=0)
+    true_model = Bernoulli('true_model', p=pi[1], value=0)
 
-Here, we use the specified prior weights as the categorical probabilities, and the variable has been arbitrarily initialized to zero (the geometric model).
+Here, we use the specified prior weights as the Bernoulli probabilities, and the variable has been arbitrarily initialized to zero (the geometric model).
 
 Next, we need prior distributions for the parameters of the two models. For the Poisson model, the expected value is given a uniform prior on the interval [0,1000]:
     
