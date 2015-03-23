@@ -74,7 +74,9 @@ Finally, the data are incorporated by specifying the appropriate likelihood. We 
     @observed
     def Ylike(value=Y, mu=mu, p=p, M=true_model):
         """Either Poisson or geometric, depending on M"""
-        return geometric_like(value+1, p)*(M==0) or poisson_like(value, mu)
+        if M:
+            return poisson_like(value, mu)
+        return geometric_like(value+1, p)
 
 Notice that the function returns the geometric likelihood when M=0, or the Poisson model otherwise. Now, all that remains is to run the model, and extract the posterior quantities to calculate the Bayes factor.
 
@@ -96,4 +98,4 @@ So, the posterior probability that the Poisson model is true is about 0.4, leavi
 
 This value can be interpreted as strong evidence in favor of the geometric model.
 
-If you want to run the model for yourself, [you can download the code here](https://github.com/pymc-devs/pymc/wiki/BayesFactor).
+If you want to run the model for yourself, [you can download the code here](https://github.com/pymc-devs/pymc3/wiki/BayesFactor).
