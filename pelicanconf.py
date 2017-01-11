@@ -13,11 +13,12 @@ TIMEZONE = 'America/Chicago'
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
-TRANSLATION_FEED_ATOM = None
-AUTHOR_FEED_ATOM = None
-AUTHOR_FEED_RSS = None
+# FEED_ALL_ATOM = None
+# CATEGORY_FEED_ATOM = None
+# TRANSLATION_FEED_ATOM = None
+# AUTHOR_FEED_ATOM = None
+# AUTHOR_FEED_RSS = None
+FEED_RSS = 'feeds/all.rss.xml'
 
 # Blogroll
 LINKS = (('Statistical Modeling, Causal Inference, and Social Science', 'http://andrewgelman.com/'),
