@@ -24,11 +24,7 @@ FEED_RSS = 'feeds/all.rss.xml'
 LINKS = (('Statistical Modeling, Causal Inference, and Social Science', 'http://andrewgelman.com/'),
          ('John D. Cook', 'http://www.johndcook.com/blog/'),
          ('Pythonic Perambulations', 'https://jakevdp.github.io'),
-         ('Healthy Algorithms', 'http://healthyalgorithms.com'),
-         ('Glau.ca', 'http://glau.ca'),
-         ('Stats in the Wild', 'http://statsinthewild.com'),
-         ('SimplyStats', 'http://simplystatistics.org'),
-         ('ŷhat', 'http://blog.yhathq.com'))
+         ('Healthy Algorithms', 'http://healthyalgorithms.com'))
 
 # Social widget
 SOCIAL = (('Twitter', 'https://twitter.com/fonnesbeck'),
@@ -48,4 +44,4 @@ PELICAN_SOBER_TWITTER_CARD_CREATOR = 'fonnesbeck'
 MARKUP = ('md', 'ipynb')
 
 PLUGIN_PATHS = ['./plugins']
-PLUGINS = ['ipynb']
+PLUGINS = ['ipynb.markup']
